@@ -1,0 +1,17 @@
+def is_palindrome(word):
+  #removing the spaces
+  word=word.replace(" ","")
+  start=0
+  end=len(word)-1
+  #iterate untill start crosse end
+  while(start<end):
+    #checking if start and end not same than return false
+    if(word[start]!=word[end]):
+      return False
+    start=start+1
+    end=end-1
+  return True
+
+print(is_palindrome("madam"))
+print(is_palindrome("123 21"))
+print(is_palindrome("123 213"))
